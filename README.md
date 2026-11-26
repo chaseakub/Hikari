@@ -203,6 +203,8 @@ Use `requireUser()` for authenticated operations and `billing.requireAccess(user
 
 Hikari includes an individual account, one subscription path, and embedded Docs/Blog. Its Organization/Project selectors and charts are illustrative; it does not implement collaboration, persisted Projects, lifetime payments or guest checkout. See [Project structure](src/content/docs/getting-started/project-structure.mdx) for edit points and example-data limits, and [Testing](src/content/docs/reference/testing.mdx) for proof of your changes. Hikari does not include a newsletter or an app-level email provider. Customize local MDX in `src/content/docs` and `src/content/blogs` to publish your own Docs and Blog.
 
+Pull requests that change Supabase migrations run [RattleCheck](.github/workflows/rattlecheck.yml) against the base branch. A new high or critical permission finding points back to the SQL line. To review the migration history locally, run `npx rattlecheck@latest` from the repository root. No Supabase credentials are needed.
+
 ## Get help
 
 Start with [Run locally](src/content/docs/getting-started/index.mdx) for Docker, ports and environment readiness, or [Subscriptions](src/content/docs/features/payments.mdx#check-delivery-and-access) for billing delivery and access. If you still need help, open a [Hikari issue](https://github.com/coremvp/Hikari/issues) with:
